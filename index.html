@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQuery Bibliotek -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Kit Fotawesome -->
+    <script src="https://kit.fontawesome.com/3447bf28b8.js" crossorigin="anonymous"></script>
+    <!-- JS Delivr Bibliotek -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- STYLE OCH JAVASCRIPT -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>FILM DB</title>
+  </head>
+  <body>
+    <!-- Sidebar med film kategorier-->
+    <div id="sidebar">
+      <div id="tags">
+        <a class="tags" href="#" data-category-id="28">Action</a>
+        <a class="tags" href="#" data-category-id="12">Adventure</a>
+        <a class="tags" href="#" data-category-id="16">Animation</a>
+        <a class="tags" href="#" data-category-id="35">Comedy</a>
+        <a class="tags" href="#" data-category-id="80">Crime</a>
+        <a class="tags" href="#" data-category-id="99">Documentary</a>
+        <a class="tags" href="#" data-category-id="18">Drama</a>
+        <a class="tags" href="#" data-category-id="10751">Family</a>
+        <a class="tags" href="#" data-category-id="14">Fantasy</a>
+        <a class="tags" href="#" data-category-id="36">History</a>
+        <a class="tags" href="#" data-category-id="27">Horror</a>
+        <a class="tags" href="#" data-category-id="10402">Music</a>
+        <a class="tags" href="#" data-category-id="9648">Mystery</a>
+        <a class="tags" href="#" data-category-id="10749">Romance</a>
+        <a class="tags" href="#" data-category-id="878">Science Fiction</a>
+        <a class="tags" href="#" data-category-id="10770">TV Movie</a>
+        <a class="tags" href="#" data-category-id="53">Thriller</a>
+        <a class="tags" href="#" data-category-id="10752">War</a>
+        <a class="tags" href="#" data-category-id="37">Western</a>
+      </div>
+   <!--Watermark för TMDB-->
+      <div class="watermark"><img
+        id="watermark" src="./IMG/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="watermark"/></div>
+     </div>
+
+    <!-- Main Content - Navbar - Header - Movie section -->
+    <div id="content">
+      <nav class="navbar">
+        <div class="logo">FILM DB</div>
+        <div class="box">
+          <input type="text" id="query"/><label><input type="radio" name="searchType" value="movie" checked> Movie</label>
+            <label><input type="radio" name="searchType" value="actor"> Actor</label>
+          <button id="searchBtn">search</button>
+        </div>
+        <div class="navbar-links">
+          <ul>
+            <li id="home-link"><a href="#">HOME</a></li>
+            <li id="popular-link"><a href="#">POPULAR</a></li>
+            <li id="top-rated-link"><a href="#">TOP RATED</a></li>
+            <li><a href="#">TV SHOWS</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <header>
+        <div id="slideshow">
+          <img src="./IMG/header-img.png" alt="Slide 1">
+          <img src="./IMG/header-img-2.png" alt="Slide 2">
+        </div>
+      </header>
+      <div class="ERROR"></div>
+      <div id="movie-container">
+        <div class="movie-section">
+          <div>
+            <img id="movieImage" src="" alt="Movie Poster">
+            <h2 id="h2Name"></h2>
+            <p id="pAbout"></p>
+            <p class="pDate"></p>
+            <p class="pknownForD">Known For:</p>
+            <p class="pKnownFor"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+      <div class="footer-content">
+        <h3>FILM DB</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, blanditiis cumque dignissimos ipsam deserunt nam, quo p</p>
+        <ul class="Socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>COPYRIGHT &copy;2024 DESIGNED BY: JESPER ANDERSSON</p>
+      </div>
+  </footer>
+</html>
