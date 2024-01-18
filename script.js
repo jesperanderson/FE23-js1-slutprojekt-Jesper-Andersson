@@ -23,13 +23,13 @@
  * - Known for
  */ 
 
-const API_KEY = "511c6c0f11c83e225e33b3aea9c617fa";
+const api_key = "511c6c0f11c83e225e33b3aea9c617fa";
 const url = "https://api.themoviedb.org/3/discover/movie?api_key=511c6c0f11c83e225e33b3aea9c617fa";
-const BaseUrl = "https://api.themoviedb.org/3";
-const ApiUrl = BaseUrl + "/discover/movie?api_key=" + API_KEY;
+const baseUrl = "https://api.themoviedb.org/3";
+const apiUrl = baseUrl + "/discover/movie?api_key=" + api_key;
 const imgUrl = "https://image.tmdb.org/t/p/w300/";
 
-// const genreUrl = BaseUrl + 'https://api.themoviedb.org/3/genre/movie/list?api_key=' +API_KEY
+// const genreUrl = baseUrl + 'https://api.themoviedb.org/3/genre/movie/list?api_key=' +api_key
 
 const main = document.getElementById("movie-section");
 const form = document.getElementById("form");
@@ -56,23 +56,23 @@ function startSlideshow() {
 startSlideshow();
 
 ///////////// LÄNKAR - NAVBAREN ///////////// 
-  getMovies(ApiUrl + "&sort_by=release_date.desc&vote_count.gte=100&page=1");
+  getMovies(apiUrl + "&sort_by=release_date.desc&vote_count.gte=100&page=1");
   const popularLink = document.getElementById("popular-link");
   const topRatedLink = document.getElementById("top-rated-link");
   const homeLink = document.querySelector(".navbar-links li:first-child a");
   popularLink.addEventListener("click", function (event) {
     event.preventDefault();
-    getMovies(ApiUrl + "&sort_by=popularity.desc&page=1");
+    getMovies(apiUrl + "&sort_by=popularity.desc&page=1");
   });
 
   topRatedLink.addEventListener("click", function (event) {
     event.preventDefault();
-    getMovies(ApiUrl + "&sort_by=vote_count.desc&page=1");
+    getMovies(apiUrl + "&sort_by=vote_count.desc&page=1");
   });
 
   homeLink.addEventListener("click", function (event) {
     event.preventDefault();
-    getMovies(ApiUrl + "&sort_by=release_date.desc&vote_count.gte=100&page=1");
+    getMovies(apiUrl + "&sort_by=release_date.desc&vote_count.gte=100&page=1");
   });
 
 ///////////// MAIN CONTENT - HOMEPAGE - DISPLAY TOP 10 MOVIES ///////////// 
